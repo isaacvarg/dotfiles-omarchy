@@ -1,0 +1,18 @@
+# If not running interactively, don't do anything
+#[[ $- != *i* ]] && return
+
+# Load zsh options, keybindings, and completion
+[[ -f /usr/share/omarchy-zsh/shell/zoptions ]] && source /usr/share/omarchy-zsh/shell/zoptions
+
+# Load shared shell configuration (aliases, functions, environment, tool init)
+[[ -f /usr/share/omarchy-zsh/shell/all ]] && source /usr/share/omarchy-zsh/shell/all
+
+# my customizations
+# these live in my dotfiles
+ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+
+for conf in "$ZDOTDIR"/*.zsh(N); do
+  source "$conf"
+done
+
+unset conf ZDOTDIR
