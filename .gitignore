@@ -1,0 +1,24 @@
+# Omarchy state / clones
+**/omarchy/plugins/
+**/omarchy/themes/
+**/omarchy/current/
+**/omarchy/**/*.sample
+**/dot_git/
+
+# Secrets: never commit
+.env
+*.env
+*.pem
+*.key
+*.p12
+*.kdbx
+*id_rsa*
+*id_ed25519*
+*.age.key
+
+# Junk
+__pycache__/
+*.pyc
+*.swp
+*~
+.DS_Store

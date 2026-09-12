@@ -1,0 +1,19 @@
+.config/omarchy/themes
+.config/omarchy/plugins
+.config/omarchy/hooks/**/*.sample
+.config/omarchy/themed/*.sample
+
+# Omarchy: setup-prompt hooks installed by migrations
+.config/omarchy/hooks/post-update.d/install-voxtype.hook
+.config/omarchy/hooks/post-update.d/setup-agent.hook
+.config/omarchy/hooks/post-update.d/setup-fingerprint.hook
+
+# Omarchy: legacy theme state (pre-2025 layout; lives in ~/.local/state/omarchy now)
+# themes/aether is covered by the .config/omarchy/themes line above
+.config/omarchy/current
+
+# Junk
+**/__pycache__
+**/*.pyc
+**/*.swp
+**/*~
