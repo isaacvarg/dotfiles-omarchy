@@ -27,3 +27,7 @@ require("default.hypr.toggles")
 
 -- Add any other personal Hyprland configuration below.
 -- o.window("qemu", { workspace = "5" })
+
+-- Tile Steam and 1Password instead of floating (overrides Omarchy defaults).
+o.window("steam", { float = false })
+o.window("^(1[p|P]assword)$", { float = false })
