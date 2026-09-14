@@ -52,3 +52,8 @@ o.bind("SUPER + H", "Focus on left window", hl.dsp.focus({ direction = "l" }))
 o.bind("SUPER + L", "Focus on right window", hl.dsp.focus({ direction = "r" }))
 o.bind("SUPER + K", "Focus on above window", hl.dsp.focus({ direction = "u" }))
 o.bind("SUPER + J", "Focus on below window", hl.dsp.focus({ direction = "d" }))
+
+-- SUPER+O for screenshot; move default "Pop window out" to SUPER+SHIFT+O
+hl.unbind("SUPER + O")
+o.bind("SUPER + O", "Screenshot", "omarchy-capture-screenshot")
+o.bind("SUPER + SHIFT + O", "Pop window out (float & pin)", "omarchy-hyprland-window-pop")
