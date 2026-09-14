@@ -17,3 +17,6 @@
 **/*.pyc
 **/*.swp
 **/*~
+
+# Reference material, not a dotfile to deploy
+chezmoi.jsonc.example

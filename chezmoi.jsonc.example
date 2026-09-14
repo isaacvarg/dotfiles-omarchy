@@ -1,0 +1,23 @@
+// Example chezmoi config -- copy to ~/.config/chezmoi/chezmoi.jsonc on a new
+// machine and edit "environment" to match that machine.
+//
+//   mkdir -p ~/.config/chezmoi
+//   cp ~/.local/share/chezmoi/chezmoi.jsonc.example ~/.config/chezmoi/chezmoi.jsonc
+//
+{
+  // Custom data variables accessible in templates via {{ . }}
+  "data": {
+    // Which machine this is. Selects the per-environment block in
+    // dot_config/hypr/monitors.lua.tmpl:
+    //
+    //   "work"     -> dual LG HDR QHD 2560x1440, stacked vertically,
+    //                 VRR and auto-HDR disabled
+    //   "personal" -> single DP-3 at 2560x1440@144
+    //   anything else -> no monitor overrides; Hyprland's preferred/auto
+    //                    catch-all applies
+    //
+    // Required: templates reference .environment directly, so `chezmoi apply`
+    // fails with "map has no entry for key environment" if this is missing.
+    "environment": "work"
+  }
+}
