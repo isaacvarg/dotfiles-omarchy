@@ -16,3 +16,6 @@ for conf in "$ZDOTDIR"/*.zsh(N); do
 done
 
 unset conf ZDOTDIR
+
+# Hermes Agent command
+case ":$PATH:" in *":$HOME/.local/bin:"*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
